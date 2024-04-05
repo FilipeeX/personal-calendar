@@ -73,7 +73,7 @@ body {
     background-color: rgb(233, 233, 233);
     border-radius: 20px;
     margin: 44px auto 0 auto;
-    animation: 300ms ease-out 0s 1 calendar-appearance;
+    animation: 500ms ease-out 0s 1 calendar-appearance;
 }
 
 @keyframes calendar-appearance {
@@ -89,4 +89,19 @@ body {
         width: 1600px;
         opacity: 100%;
     }
+}
+
+#calendar-days {
+    margin: 0 50px;
+}
+
+.calendar-day {
+    display: inline-block;
+    list-style: none;
+    width: 300px;
+    height: 850px;
+}
+
+.calendar-day:nth-child(odd) {
+    background-color: rgb(223, 223, 223);
 }
