@@ -10,7 +10,7 @@ body {
 
 .content {
     height: 100vh;
-    overflow: hidden; /* because some guy on stack overflow said so and it fixed the issue so i cant complain, if you do decide to delete this line, the loader animation will be fucked up beyond beleive */
+    overflow: auto; /* because some guy on stack overflow said so and it fixed the issue so i cant complain, if you do decide to delete this line, the loader animation will be fucked up beyond beleive */
 }
 
 /* LOADER ANIMATION */
