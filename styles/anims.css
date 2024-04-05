@@ -1,0 +1,58 @@
+/* LOADING SCREEN */
+
+@keyframes l8-0 {
+    0%,12.49%   {background-size: var(--s),0 0     ,0 0     ,0 0     ,0 0     ,0 0     ,0 0     ,0 0     }
+    12.5%,24.9% {background-size: var(--s),var(--s),0 0     ,0 0     ,0 0     ,0 0     ,0 0     ,0 0     }
+    25%,37.4%   {background-size: var(--s),var(--s),var(--s),0 0     ,0 0     ,0 0     ,0 0     ,0 0     }
+    37.5%,49.9% {background-size: var(--s),var(--s),var(--s),0 0     ,var(--s),0 0     ,0 0     ,0 0     }
+    50%,61.4%   {background-size: var(--s),var(--s),var(--s),0 0     ,var(--s),0 0     ,0 0     ,var(--s)}
+    62.5%,74.9% {background-size: var(--s),var(--s),var(--s),0 0     ,var(--s),0 0     ,var(--s),var(--s)}
+    75%,86.4%   {background-size: var(--s),var(--s),var(--s),0 0     ,var(--s),var(--s),var(--s),var(--s)}
+    87.5%,100%  {background-size: var(--s),var(--s),var(--s),var(--s),var(--s),var(--s),var(--s),var(--s)}
+}
+@keyframes l8-1 {
+  0%,
+  5%    {transform: translate(0   ,0   )}
+  12.5% {transform: translate(100%,0   )}
+  25%   {transform: translate(200%,0   )}
+  37.5% {transform: translate(200%,100%)}
+  50%   {transform: translate(200%,200%)}
+  62.5% {transform: translate(100%,200%)}
+  75%   {transform: translate(0   ,200%)}
+  87.5% {transform: translate(0   ,100%)}
+  95%,
+  100%  {transform: translate(100%,100%)}
+}
+
+
+/* CALENDAR */
+
+@keyframes calendar-appearance {
+    0% {
+        margin-top: 69px;
+        width: 1500px;
+        height: 800px;
+        opacity: 0%;
+    }
+    100% {
+        margin-top: 44px;
+        width: 1600px;
+        height: 850px;
+        opacity: 100%;
+    }
+}
+
+@keyframes calendar-day-appearance {
+    0% {
+        width: 279px;
+        height: 800px;
+        opacity: 0%;
+    }
+    50% {
+        width: 300px;
+        height: 850px;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
