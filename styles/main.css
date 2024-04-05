@@ -69,13 +69,8 @@ body {
 
 #calendar-container {
     width: fit-content;
-    height: fit-content;
+    height: 850px;
     background-color: rgb(233, 233, 233);
     border-radius: 20px;
-    margin: 40px auto 0 auto;
-}
-
-#calendar {
-    width: 1500px;
-    height: 800px;
+    margin: 44px auto 0 auto;
 }
