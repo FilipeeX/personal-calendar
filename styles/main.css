@@ -79,14 +79,6 @@ body {
     background-color: rgb(223, 223, 223);
 }
 
-.calendar-day:hover {
-    background-color: rgb(212, 212, 212);
-}
-
-.calendar-day:active {
-    background-color: rgb(199, 199, 199);
-}
-
 .calendar-day-container {
     position: absolute;
     inset: 20px;
@@ -98,4 +90,57 @@ body {
 
 .calendar-day__head h6 {
     font-weight: 100;
+}
+
+.calendar-day__tasks {
+    margin-top: 40px;
+}
+
+.calendar-task--homework {
+    border: rgb(255, 61, 47) 0px solid;
+}
+
+.calendar-task {
+    display: block;
+    margin-top: 35px;
+    list-style: none;
+    text-align: start;
+    min-height: 100px;
+    background-color: white;
+    border: rgb(255, 61, 47) 0px solid;
+    border-radius: 8px;
+    border-left-width: 4px;
+    transition: 300ms;
+    padding: 15px;
+}
+
+.calendar-task:first-of-type {
+    margin-top: 0;
+}
+
+.calendar-task:hover {
+    background-color: rgb(245, 245, 245);
+    border-left-width: 6px;
+}
+
+.calendar-task:active {
+    background-color: rgb(233, 233, 233);
+    border-left-width: 8px;
+}
+
+.calendar-task__icon {
+    width: 50px;
+    height: 50px;
+    float: right;
+    background-image: url("/resources/icons/homework.png");
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+}
+
+.calendar-task__message {
+    margin: 10px 0;
+}
+
+.calendar-task__date {
+    text-align: end;
 }
