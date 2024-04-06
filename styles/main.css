@@ -93,21 +93,35 @@ body {
 }
 
 .calendar-day__tasks {
-    margin-top: 40px;
+    margin-top: 20px;
+    height: 700px;
+    padding-right: 8px;
+    overflow: scroll;
 }
 
 .calendar-task--homework {
-    border: rgb(255, 61, 47) 0px solid;
+    border: rgb(255, 49, 49) 0px solid;
+}
+
+.calendar-task--test {
+    border: rgb(119, 41, 209) 0px solid;
+}
+
+.calendar-task--project {
+    border: rgb(255, 229, 83) 0px solid;
+}
+
+.calendar-task--task {
+    border: rgb(125, 255, 113) 0px solid;
 }
 
 .calendar-task {
     display: block;
-    margin-top: 35px;
+    margin-top: 10px;
     list-style: none;
     text-align: start;
     min-height: 100px;
     background-color: white;
-    border: rgb(255, 61, 47) 0px solid;
     border-radius: 8px;
     border-left-width: 4px;
     transition: 300ms;
@@ -132,9 +146,24 @@ body {
     width: 50px;
     height: 50px;
     float: right;
-    background-image: url("/resources/icons/homework.png");
     background-size: 50px 50px;
     background-repeat: no-repeat;
+}
+
+.calendar-task__icon--homework {
+    background-image: url("/resources/icons/homework.png");
+}
+
+.calendar-task__icon--test {
+    background-image: url("/resources/icons/test.png");
+}
+
+.calendar-task__icon--project {
+    background-image: url("/resources/icons/project.png");
+}
+
+.calendar-task__icon--task {
+    background-image: url("/resources/icons/task.png");
 }
 
 .calendar-task__message {
