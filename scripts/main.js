@@ -17,3 +17,14 @@ function exitLoader() {
     loader.style.display = "none";
     loadedContent.style.display = "block";
 }
+
+
+// UTIL
+
+function toList(htmlCollection) {
+    let res = [];
+    for (elem in htmlCollection) {
+        res.push(elem);
+    }
+    return res;
+}
