@@ -132,7 +132,7 @@ body {
     margin-top: 0;
 }
 
-.calendar-task:hover {
+/* .calendar-task:hover {
     background-color: rgb(245, 245, 245);
     border-left-width: 6px;
 }
@@ -140,7 +140,7 @@ body {
 .calendar-task:active {
     background-color: rgb(233, 233, 233);
     border-left-width: 8px;
-}
+} */
 
 .calendar-task__icon {
     width: 50px;
@@ -214,4 +214,21 @@ body {
 
 .calendar-control--edit:hover {
     right: 43px;
+}
+
+.calendar-control:active {
+    width: 25px;
+    height: 25px;
+    top: 5px;
+    font-size: 0.9rem;
+}
+
+.calendar-control--remove:active {
+    right: 5px;
+    background-color: #bd1717;
+}
+
+.calendar-control--edit:active {
+    right: 45px;
+    background-color: #280753;
 }
