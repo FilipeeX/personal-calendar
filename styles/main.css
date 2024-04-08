@@ -117,7 +117,7 @@ body {
 
 .calendar-task {
     display: block;
-    margin-top: 10px;
+    margin-top: 12px;
     list-style: none;
     text-align: start;
     min-height: 100px;
@@ -174,4 +174,44 @@ body {
     text-align: end;
     color: gray;
     font-weight: 300;
+}
+
+.calendar-controls {
+    position: relative;
+}
+
+.calendar-control {
+    border: none;
+    color: white;
+    width: 35px;
+    height: 35px;
+    font-size: 1.3rem;
+    border-radius: 100px;
+    position: absolute;
+    transition: 200ms;
+}
+
+.calendar-control--remove {
+    background-color: #e62222;
+    right: 0px;
+}
+
+.calendar-control--edit {
+    background-color: #3B0086;
+    right: 40px;
+}
+
+.calendar-control:hover {
+    width: 30px;
+    height: 30px;
+    top: 3px;
+    font-size: 1rem;
+}
+
+.calendar-control--remove:hover {
+    right: 3px;
+}
+
+.calendar-control--edit:hover {
+    right: 43px;
 }
