@@ -189,6 +189,7 @@ body {
     border-radius: 100px;
     position: absolute;
     transition: 200ms;
+    cursor: pointer;
 }
 
 .calendar-control--remove {

@@ -14,3 +14,51 @@ for (let i = 0; i < messages.length; i++) {
         message.style.marginBottom = "28px";
     }
 };
+
+
+let task = document.getElementsByClassName("calendar-task").item(0);
+let controls = task.querySelector(".calendar-controls");
+
+
+const hoveredExcludingChildren = new Map();
+const hoveredIncludingChildren = new Map();
+
+document.addEventListener("mouseover", registerHover);
+document.addEventListener("mouseout", registerOut);
+
+
+function registerHover(event) {
+
+    let target = event.target;
+
+    hoveredExcludingChildren.set(target, true);
+
+    let stepElem = target;
+    
+    while (stepElem.parentElement != null) {
+        hoveredIncludingChildren.set(stepElem, true);
+        stepElem = stepElem.parentElement;
+    }
+}
+
+function registerOut(event) {
+
+    let target = event.target;
+
+    hoveredExcludingChildren.set(target, false);
+
+    let stepElem = target;
+
+    while (stepElem.parentElement != null) {
+        hoveredIncludingChildren.set(stepElem, false);
+        stepElem = stepElem.parentElement;
+    }
+}
+
+setInterval(function(){
+    if (hoveredIncludingChildren.get(task)) {
+        controls.style.display = "block";
+    } else {
+        controls.style.display = "none";
+    }
+})
