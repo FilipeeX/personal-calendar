@@ -16,9 +16,7 @@ for (let i = 0; i < messages.length; i++) {
 };
 
 
-let task = document.getElementsByClassName("calendar-task").item(0);
-let controls = task.querySelector(".calendar-controls");
-
+const tasks = [...document.getElementsByClassName("calendar-task")];
 
 const hoveredExcludingChildren = new Map();
 const hoveredIncludingChildren = new Map();
@@ -56,9 +54,20 @@ function registerOut(event) {
 }
 
 setInterval(function(){
-    if (hoveredIncludingChildren.get(task)) {
-        controls.style.display = "block";
-    } else {
-        controls.style.display = "none";
-    }
-})
+    checkTaskControls();
+});
+
+function checkTaskControls() {
+    for (taskIndex in tasks) {
+
+        let task = tasks[taskIndex];
+        let controls = task.querySelector(".calendar-controls");
+
+        if (hoveredIncludingChildren.get(task)) {
+            controls.style.display = "block";
+        } else {
+            controls.style.display = "none";
+        };
+
+    };
+};
