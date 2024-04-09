@@ -55,6 +55,7 @@ function registerOut(event) {
 
 setInterval(function(){
     checkTaskControls();
+    checkSidepanel();
 });
 
 function checkTaskControls() {
@@ -71,3 +72,18 @@ function checkTaskControls() {
 
     };
 };
+
+
+// SIDE PANEL
+
+function checkSidepanel() {
+
+    let sidePanel = document.getElementById("sidepanel");
+
+    if (hoveredIncludingChildren.get(sidePanel)) {
+        sidePanel.style.left = "0px";
+    } else {
+        sidePanel.style.left = "-76px";
+    };
+    
+}
