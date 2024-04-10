@@ -245,7 +245,6 @@ body {
     left: -85px;
     background-color: #3B0086;
     z-index: 1;
-    padding-left: 4px;
 }
 
 #sidepanel-extender {
@@ -260,5 +259,19 @@ body {
 }
 
 #sidepanel__content {
-    /* this is the div containing the contents of the sidepanel, it is differenciated because the other one is the extender */
+    margin: 20px auto 0 auto;
+    width: fit-content;
+}
+
+.sidepanel-button {
+    display: block;
+    width: 65px;
+    height: 65px;
+    background-color: transparent;
+    border: #EA7AF4 solid 4px;
+    border-radius: 100px;
+    color: #EA7AF4;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 10px 0;
 }
