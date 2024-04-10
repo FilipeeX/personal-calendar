@@ -81,9 +81,9 @@ function checkSidepanel() {
     let sidePanel = document.getElementById("sidepanel");
 
     if (hoveredIncludingChildren.get(sidePanel)) {
-        sidePanel.style.left = "0px";
+        extendSidePanel();
     } else {
-        sidePanel.style.left = "-76px";
+        retractSidePanel();
     };
     
 }

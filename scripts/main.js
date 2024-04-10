@@ -28,3 +28,54 @@ function toList(htmlCollection) {
     }
     return res;
 }
+
+
+// SIDEPANEL
+
+let sidePanelExtended = false;
+
+
+function extendSidePanel() {
+
+    if (sidePanelExtended) {
+        return;
+    }
+
+    const sidePanel = document.getElementById("sidepanel");
+    const intervalId = setInterval(sidePanelExtendFrame);
+
+    let frameState = -80;
+    function sidePanelExtendFrame() {
+
+        sidePanel.style.left = frameState + "px";
+        frameState += 5;
+
+        if (frameState == 0) {
+            clearInterval(intervalId);
+            sidePanelExtended = true;
+        }
+    }
+}
+
+
+function retractSidePanel() {
+
+    if (!sidePanelExtended) {
+        return;
+    }
+
+    const sidePanel = document.getElementById("sidepanel");
+    const intervalId = setInterval(sidePanelExtendFrame);
+
+    let frameState = 0;
+    function sidePanelExtendFrame() {
+
+        sidePanel.style.left = frameState + "px";
+        frameState -= 5;
+
+        if (frameState == -80) {
+            clearInterval(intervalId);
+            sidePanelExtended = false;
+        }
+    }
+}
