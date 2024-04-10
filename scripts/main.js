@@ -44,13 +44,16 @@ function extendSidePanel() {
     const sidePanel = document.getElementById("sidepanel");
     const intervalId = setInterval(sidePanelExtendFrame);
 
-    let frameState = -80;
+    let frameState = -85;
     function sidePanelExtendFrame() {
 
         sidePanel.style.left = frameState + "px";
         frameState += 5;
 
         if (frameState == 0) {
+
+            sidePanel.style.left = frameState + "px";
+
             clearInterval(intervalId);
             sidePanelExtended = true;
         }
@@ -73,7 +76,10 @@ function retractSidePanel() {
         sidePanel.style.left = frameState + "px";
         frameState -= 5;
 
-        if (frameState == -80) {
+        if (frameState == -85) {
+
+            sidePanel.style.left = frameState + "px";
+
             clearInterval(intervalId);
             sidePanelExtended = false;
         }
