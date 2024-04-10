@@ -253,7 +253,7 @@ body {
     height: 60px;
     width: 12px;
     top: calc(50vh - 50px);
-    left: 80px;
+    left: 84px;
     background-image: url("/resources/util/sidebar-extender.png");
     background-repeat: no-repeat;
     background-size: 12px 60px;
