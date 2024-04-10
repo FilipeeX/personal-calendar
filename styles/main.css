@@ -274,4 +274,18 @@ body {
     font-size: 1.3rem;
     font-weight: 700;
     margin: 10px 0;
+    transition: 300ms;
+}
+
+.sidepanel-button:hover {
+    border-color: #c41cd3;
+}
+
+.sidepanel-button:active {
+    border-color: #91129c;
+    background-color: #2e0466;
+    width: 55px;
+    height: 55px;
+    font-size: 1rem;
+    margin: 15px 5px 15px 5px;
 }
